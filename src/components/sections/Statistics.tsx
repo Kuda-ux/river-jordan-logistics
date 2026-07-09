@@ -48,7 +48,7 @@ function CounterItem({ stat, inView }: { stat: typeof stats[0]; inView: boolean 
       <div className="w-16 h-16 rounded-2xl bg-white/10 hover:bg-white/15 flex items-center justify-center mx-auto mb-4 transition-colors border border-white/15 group-hover:border-[#2980B9]/50">
         <stat.icon size={24} className="text-[#2980B9] group-hover:text-accent transition-colors" />
       </div>
-      <div className="text-4xl sm:text-5xl font-bold text-white mb-1" style={{ fontFamily: 'var(--font-sora)' }}>
+      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-1" style={{ fontFamily: 'var(--font-sora)' }}>
         {count}{stat.suffix}
       </div>
       <div className="text-white font-semibold text-sm mb-1">{stat.label}</div>
@@ -96,7 +96,7 @@ export default function Statistics() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
           {stats.map((stat) => (
             <CounterItem key={stat.label} stat={stat} inView={inView} />
           ))}

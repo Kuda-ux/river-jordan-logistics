@@ -170,7 +170,7 @@ export default function Industries() {
         </div>
 
         {/* Bottom CTA banner */}
-        <div className="mt-14 relative rounded-3xl overflow-hidden">
+        <div className="mt-14 relative rounded-3xl overflow-hidden min-h-[220px] sm:min-h-[260px]">
           <Image
             src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1600&q=85"
             alt="River Jordan Logistics fleet operations"

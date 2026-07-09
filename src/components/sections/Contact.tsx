@@ -90,7 +90,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* ── Left: info + map ── */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -232,7 +232,7 @@ export default function Contact() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl shadow-navy/8 border border-surface-dark">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xl shadow-navy/8 border border-surface-dark">
               <h3
                 className="text-xl font-bold text-navy mb-2"
                 style={{ fontFamily: 'var(--font-sora)' }}

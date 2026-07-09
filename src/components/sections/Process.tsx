@@ -137,8 +137,8 @@ export default function Process() {
         {/* Visual banner */}
         <div className="relative h-64 sm:h-80 rounded-3xl overflow-hidden mb-16">
           <Image
-            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&q=85"
-            alt="Logistics professionals planning operations"
+            src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1600&q=85"
+            alt="Logistics operations and warehouse management"
             fill
             className="object-cover object-center"
             sizes="100vw"
@@ -160,7 +160,7 @@ export default function Process() {
           <div className="hidden lg:block absolute left-1/2 top-8 bottom-8 w-0.5 bg-gradient-to-b from-royal via-brand to-accent -translate-x-1/2" />
           
           {/* Vertical line (mobile) */}
-          <div className="lg:hidden absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-royal via-brand to-accent" />
+          <div className="lg:hidden absolute left-5 top-6 bottom-6 w-0.5 bg-gradient-to-b from-royal via-brand to-accent" />
 
           <div className="space-y-10">
             {steps.map((step, i) => (

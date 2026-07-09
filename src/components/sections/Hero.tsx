@@ -93,18 +93,26 @@ export default function Hero() {
           {/* Subheadline */}
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg text-white/75 leading-relaxed mb-8 max-w-2xl"
+            className="text-sm sm:text-base lg:text-lg text-white/75 leading-relaxed mb-3 max-w-2xl"
           >
-            Professional Freight Broking • Supply Chain Consulting • Fleet Management • Logistics Transformation
+            Zimbabwe&apos;s premier logistics consulting firm — powering supply chains across Africa.
           </motion.p>
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-x-4 gap-y-1 mb-8">
+            {['Freight Broking', 'Supply Chain Strategy', 'Fleet Management', 'Warehouse Design'].map((s) => (
+              <span key={s} className="text-xs text-white/60 font-medium flex items-center gap-1.5">
+                <span className="w-1 h-1 rounded-full bg-accent inline-block" />
+                {s}
+              </span>
+            ))}
+          </motion.div>
 
           {/* CTAs */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-            <Link href="/#contact" className="btn-accent">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Link href="/#contact" className="btn-accent justify-center sm:justify-start">
               Request Consultation
               <ArrowRight size={16} />
             </Link>
-            <Link href="/#contact" className="btn-outline">
+            <Link href="/#contact" className="btn-outline justify-center sm:justify-start">
               Get a Quote
             </Link>
           </motion.div>

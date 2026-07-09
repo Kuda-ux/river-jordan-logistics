@@ -148,27 +148,27 @@ export default function About() {
             </div>
 
             {/* Two smaller images side by side */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative rounded-2xl overflow-hidden h-44 shadow-lg shadow-navy/10">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative rounded-2xl overflow-hidden h-40 sm:h-44 shadow-lg shadow-navy/10">
                 <Image
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&q=80"
-                  alt="Logistics professionals at work"
+                  src="https://images.unsplash.com/photo-1573221566340-81bdde00b1c8?w=600&q=80"
+                  alt="Logistics consulting and strategy"
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="25vw"
+                  className="object-cover object-center hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 1024px) 45vw, 22vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
                   <span className="text-white/80 text-xs font-semibold">Consulting</span>
                 </div>
               </div>
-              <div className="relative rounded-2xl overflow-hidden h-44 shadow-lg shadow-navy/10">
+              <div className="relative rounded-2xl overflow-hidden h-40 sm:h-44 shadow-lg shadow-navy/10">
                 <Image
-                  src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=500&q=80"
+                  src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&q=80"
                   alt="Fleet and freight management across Africa"
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="25vw"
+                  className="object-cover object-center hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 1024px) 45vw, 22vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
@@ -177,11 +177,11 @@ export default function About() {
               </div>
             </div>
 
-            {/* Floating stat card */}
+            {/* Floating stat card — tucked inside on mobile, floats out on lg */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-6 -left-6 glass-white rounded-2xl p-5 shadow-xl border border-white/80"
+              className="absolute bottom-3 left-3 lg:-bottom-6 lg:-left-6 glass-white rounded-2xl p-4 lg:p-5 shadow-xl border border-white/80"
             >
               <p className="text-3xl font-bold text-navy">15+</p>
               <p className="text-sm text-muted font-medium">Years of Logistics Expertise</p>
