@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react'
@@ -92,7 +93,19 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-24 bg-surface" ref={ref}>
+    <section className="py-24 relative overflow-hidden" ref={ref}>
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1573221566340-81bdde00b1c8?w=1920&q=85"
+          alt="Professional logistics operations"
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-surface/96" />
+      </div>
+      <div className="relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ── Header ── */}
         <div className="text-center mb-14">
@@ -237,6 +250,7 @@ export default function Testimonials() {
             <ChevronRight size={18} />
           </button>
         </div>
+      </div>
       </div>
     </section>
   )

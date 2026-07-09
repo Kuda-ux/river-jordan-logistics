@@ -150,25 +150,34 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          {/* Right: Image + floating cards */}
+          {/* Right: 2x2 photo grid collage */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-            <div className="relative rounded-3xl overflow-hidden h-[600px]">
-              <Image
-                src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=85"
-                alt="Logistics operations"
-                fill
-                className="object-cover"
-                sizes="50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent" />
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80', alt: 'Freight logistics operations' },
+                { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80', alt: 'Mining industry logistics' },
+                { src: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80', alt: 'Supply chain consulting' },
+                { src: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=600&q=80', alt: 'Warehouse management' },
+              ].map((img, i) => (
+                <div key={img.alt} className={`relative rounded-2xl overflow-hidden ${i === 0 ? 'col-span-2 h-56' : 'h-48'}`}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 1280px) 50vw, 400px"
+                  />
+                  <div className="absolute inset-0 bg-navy/20" />
+                </div>
+              ))}
             </div>
 
-            {/* Pull quote */}
+            {/* Pull quote card */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
@@ -176,13 +185,10 @@ export default function WhyChooseUs() {
             >
               <div className="text-4xl text-accent font-bold leading-none mb-2">&ldquo;</div>
               <p className="text-navy text-sm font-medium leading-relaxed italic">
-                River Jordan transformed our cross-border operations and reduced our logistics costs
-                by 28%.
+                River Jordan transformed our cross-border operations and reduced our logistics costs by 28%.
               </p>
               <div className="mt-3 flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-royal flex items-center justify-center text-white text-xs font-bold">
-                  MN
-                </div>
+                <div className="w-8 h-8 rounded-full bg-royal flex items-center justify-center text-white text-xs font-bold">MN</div>
                 <div>
                   <p className="text-navy text-xs font-bold">Michael N.</p>
                   <p className="text-muted text-xs">Head of Logistics, Mining Corp</p>

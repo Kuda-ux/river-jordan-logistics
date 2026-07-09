@@ -52,9 +52,10 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-navy shadow-2xl shadow-navy/30 py-3'
+          ? 'shadow-2xl shadow-navy/40 py-3'
           : 'bg-transparent py-5'
       }`}
+      style={scrolled ? { background: 'linear-gradient(135deg, #0B1F3A 0%, #0f2d52 60%, #1a5276 100%)' } : undefined}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -163,7 +164,8 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden overflow-hidden bg-navy border-t border-white/10"
+            className="lg:hidden overflow-hidden border-t border-white/10"
+            style={{ background: 'linear-gradient(135deg, #0B1F3A 0%, #1a5276 100%)' }}
           >
             <div className="px-4 py-6 space-y-1">
               {navLinks.map((link) => (

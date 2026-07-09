@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { MessageSquare, ClipboardList, Truck, Zap, MapPin, CircleCheck, RefreshCw } from 'lucide-react'
@@ -131,6 +132,26 @@ export default function Process() {
           <p className="text-muted max-w-2xl mx-auto">
             From initial consultation to continuous improvement — a structured, transparent, and results-driven logistics engagement model.
           </p>
+        </div>
+
+        {/* Visual banner */}
+        <div className="relative h-64 sm:h-80 rounded-3xl overflow-hidden mb-16">
+          <Image
+            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&q=85"
+            alt="Logistics professionals planning operations"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-[#2980B9]/60" />
+          <div className="absolute inset-0 flex items-center justify-start px-8 sm:px-14">
+            <div className="max-w-xl">
+              <p className="text-accent text-xs font-bold uppercase tracking-widest mb-3">Our Methodology</p>
+              <p className="text-white text-2xl sm:text-3xl font-bold leading-snug" style={{ fontFamily: 'var(--font-sora)' }}>
+                A structured engagement model that delivers measurable results at every stage.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Timeline */}

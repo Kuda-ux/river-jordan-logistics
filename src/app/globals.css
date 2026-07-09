@@ -115,16 +115,23 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-/* Gradient text */
+/* Gradient text — logo brand blue (#2980B9) as anchor colour */
 .gradient-text {
-  background: linear-gradient(135deg, #2980B9, #F97316);
+  background: linear-gradient(135deg, #1565C0, #2980B9, #3498DB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-white {
-  background: linear-gradient(135deg, #ffffff, #90CAF9);
+  background: linear-gradient(135deg, #ffffff, #3498DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-orange {
+  background: linear-gradient(135deg, #2980B9, #F97316);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -162,24 +169,25 @@ body {
   overflow: hidden;
 }
 
-/* Premium button styles */
+/* Premium button styles — using logo brand blue (#2980B9) as primary */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #1565C0, #0B1F3A);
+  background: linear-gradient(135deg, #2980B9, #1565C0);
   color: white;
   padding: 14px 32px;
   border-radius: 8px;
   font-weight: 600;
   font-size: 15px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(21, 101, 192, 0.3);
+  box-shadow: 0 4px 20px rgba(41, 128, 185, 0.35);
+  text-decoration: none;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, #1976D2, #152d52);
+  background: linear-gradient(135deg, #3498DB, #2980B9);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(21, 101, 192, 0.4);
+  box-shadow: 0 8px 30px rgba(41, 128, 185, 0.45);
 }
 
 .btn-accent {
@@ -194,6 +202,7 @@ body {
   font-size: 15px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
+  text-decoration: none;
 }
 .btn-accent:hover {
   background: linear-gradient(135deg, #FB923C, #F97316);
@@ -213,6 +222,7 @@ body {
   font-size: 15px;
   border: 2px solid rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.15);

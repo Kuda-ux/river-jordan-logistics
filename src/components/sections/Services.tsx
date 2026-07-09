@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import {
@@ -271,6 +272,30 @@ export default function Services() {
             end-to-end suite of logistics consulting services tailored for African and global
             operations.
           </p>
+        </div>
+
+        {/* Logistics showcase strip */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+          {[
+            { src: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&q=80', label: 'Fleet Operations' },
+            { src: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=600&q=80', label: 'Warehouse Solutions' },
+            { src: 'https://images.unsplash.com/photo-1605792657660-596af9009e82?w=600&q=80', label: 'Sea Freight' },
+            { src: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80', label: 'Supply Chain' },
+          ].map((item) => (
+            <div key={item.label} className="relative h-44 rounded-2xl overflow-hidden group">
+              <Image
+                src={item.src}
+                alt={item.label}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
+              <div className="absolute bottom-3 left-3">
+                <span className="text-white text-xs font-semibold">{item.label}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Category filter */}

@@ -123,23 +123,60 @@ export default function About() {
             </a>
           </motion.div>
 
-          {/* Right: Image */}
+          {/* Right: Photo collage */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden h-[500px] shadow-2xl shadow-navy/20">
+            {/* Main large image */}
+            <div className="relative rounded-3xl overflow-hidden h-72 shadow-2xl shadow-navy/20 mb-4">
               <Image
-                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=85"
-                alt="Logistics operations in Africa"
+                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=85"
+                alt="Professional logistics operations — River Jordan Consultancy"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="text-white/80 text-xs font-semibold uppercase tracking-wider">
+                  Supply Chain Operations
+                </span>
+              </div>
             </div>
+
+            {/* Two smaller images side by side */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative rounded-2xl overflow-hidden h-44 shadow-lg shadow-navy/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&q=80"
+                  alt="Logistics professionals at work"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3">
+                  <span className="text-white/80 text-xs font-semibold">Consulting</span>
+                </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden h-44 shadow-lg shadow-navy/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=500&q=80"
+                  alt="Fleet and freight management across Africa"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3">
+                  <span className="text-white/80 text-xs font-semibold">Fleet Operations</span>
+                </div>
+              </div>
+            </div>
+
             {/* Floating stat card */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
@@ -148,10 +185,11 @@ export default function About() {
             >
               <p className="text-3xl font-bold text-navy">15+</p>
               <p className="text-sm text-muted font-medium">Years of Logistics Expertise</p>
-              <div className="mt-2 h-1 w-12 bg-gradient-to-r from-royal to-accent rounded-full" />
+              <div className="mt-2 h-1 w-12 bg-gradient-to-r from-brand to-accent rounded-full" />
             </motion.div>
+
             {/* Accent decoration */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand/10 rounded-full blur-2xl" />
           </motion.div>
         </div>
 
