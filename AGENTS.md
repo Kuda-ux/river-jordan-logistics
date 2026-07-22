@@ -8,6 +8,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 **Stack:** Next.js 16.2.10 · React 19 · TypeScript · Tailwind CSS v4 · Framer Motion 12
 
+**Official domain:** `https://www.rjlogisticsconsultancy.co.zw/`
+
 ### Commands
 - `npm run dev` — start development server (http://localhost:3000)
 - `npm run build` — production build (must pass before committing)
@@ -20,6 +22,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **App Router only** — all interactive components use `'use client'`
 - **Fonts**: Inter (`--font-inter`) for body, Sora (`--font-sora`) for headings
 - **Images**: Unsplash remote patterns configured in `next.config.ts`; logo at `public/logo.jpeg`
+- **Favicon**: Generated from `public/logo.jpeg` (favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png, android icons)
 - **JSON-LD**: Injected in `src/app/layout.tsx` body via `<script type="application/ld+json">`
 - **No `<head>` tags in layout** — use Next.js `Metadata` API instead
 

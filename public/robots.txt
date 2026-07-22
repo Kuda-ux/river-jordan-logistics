@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://riverjordanlogistics.co.zw/sitemap.xml
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/chunks/
+
+# Bingbot
+User-agent: bingbot
+Allow: /
+Disallow: /api/
+
+# Host
+Host: https://www.rjlogisticsconsultancy.co.zw
+
+# Sitemap
+Sitemap: https://www.rjlogisticsconsultancy.co.zw/sitemap.xml
