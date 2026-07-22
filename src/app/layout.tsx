@@ -154,7 +154,7 @@ export const metadata: Metadata = {
     "target": "River Jordan Logistics Consultancy, freight broking, supply chain consulting, Zimbabwe",
   },
   verification: {
-    google: "google-site-verification=",
+    google: "cb9e0a28b7d8003e",
   },
 };
 
